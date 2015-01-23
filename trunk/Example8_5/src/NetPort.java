@@ -17,10 +17,11 @@ public class NetPort
 	{
 		String host = args.length > 0 ? args[0] : "localhost";
 		
-		for (int i = 1; i < 512; i++)
+		for (int i = 25; i < 512; i++)
 		{
 			try
 			{
+				System.out.println(i);
 				Socket s = new Socket(host, i);
 				System.out.println("Hay un servicio ejecutandose en el puerto " + i + " sobre la ip: " + host);
 				s.close();
