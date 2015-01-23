@@ -33,7 +33,7 @@ public class NetPort
 			} 
 			catch (IOException ex)
 			{
-				// must not be a server on this port
+				// Aqui no deberia existir ningun sevricio ejecutandose.
 			}
 		}
 	}
