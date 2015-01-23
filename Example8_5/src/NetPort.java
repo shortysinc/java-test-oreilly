@@ -7,7 +7,7 @@ import java.net.*;
  */
 
 /*
- * Este programa muestra las conexiones abiertas en un puerto determinado sobre
+ * Este programa muestra las conexiones abiertas en un puerto sobre
  * un host determinado. Por defecto el host es localhost.
  */
 
@@ -22,7 +22,6 @@ public class NetPort
 			try
 			{
 				Socket s = new Socket(host, i);
-				System.out.println(s.getLocalPort());
 				System.out.println("Hay un servicio ejecutandose en el puerto " + i + " sobre la ip: " + host);
 				s.close();
 			} 
