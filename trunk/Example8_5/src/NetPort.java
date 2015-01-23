@@ -17,13 +17,13 @@ public class NetPort
 	{
 		String host = args.length > 0 ? args[0] : "localhost";
 		
-		for (int i = 1; i < 1024; i++)
+		for (int i = 1; i < 512; i++)
 		{
 			try
 			{
 				Socket s = new Socket(host, i);
-				System.out.println("There is a server on port " + i + " of "
-						+ host);
+				System.out.println(s.getLocalPort());
+				System.out.println("Hay un servicio ejecutandose en el puerto " + i + " sobre la ip: " + host);
 				s.close();
 			} 
 			catch (UnknownHostException ex)
